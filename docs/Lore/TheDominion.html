@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.16">
+<meta name="keywords" content="Lore">
+<title>The Dominion</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<style>
+/*! Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
+/* Uncomment the following line when using as a custom stylesheet */
+/* @import "https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700"; */
+html{font-family:sans-serif;-webkit-text-size-adjust:100%}
+a{background:none}
+a:focus{outline:thin dotted}
+a:active,a:hover{outline:0}
+h1{font-size:2em;margin:.67em 0}
+b,strong{font-weight:bold}
+abbr{font-size:.9em}
+abbr[title]{cursor:help;border-bottom:1px dotted #dddddf;text-decoration:none}
+dfn{font-style:italic}
+hr{height:0}
+mark{background:#ff0;color:#000}
+code,kbd,pre,samp{font-family:monospace;font-size:1em}
+pre{white-space:pre-wrap}
+q{quotes:"\201C" "\201D" "\2018" "\2019"}
+small{font-size:80%}
+sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
+sup{top:-.5em}
+sub{bottom:-.25em}
+img{border:0}
+svg:not(:root){overflow:hidden}
+figure{margin:0}
+audio,video{display:inline-block}
+audio:not([controls]){display:none;height:0}
+fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}
+legend{border:0;padding:0}
+button,input,select,textarea{font-family:inherit;font-size:100%;margin:0}
+button,input{line-height:normal}
+button,select{text-transform:none}
+button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}
+button[disabled],html input[disabled]{cursor:default}
+input[type=checkbox],input[type=radio]{padding:0}
+button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}
+textarea{overflow:auto;vertical-align:top}
+table{border-collapse:collapse;border-spacing:0}
+*,::before,::after{box-sizing:border-box}
+html,body{font-size:100%}
+body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;line-height:1;position:relative;cursor:auto;-moz-tab-size:4;-o-tab-size:4;tab-size:4;word-wrap:anywhere;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased}
+a:hover{cursor:pointer}
+img,object,embed{max-width:100%;height:auto}
+object,embed{height:100%}
+img{-ms-interpolation-mode:bicubic}
+.left{float:left!important}
+.right{float:right!important}
+.text-left{text-align:left!important}
+.text-right{text-align:right!important}
+.text-center{text-align:center!important}
+.text-justify{text-align:justify!important}
+.hide{display:none}
+img,object,svg{display:inline-block;vertical-align:middle}
+textarea{height:auto;min-height:50px}
+select{width:100%}
+.subheader,.admonitionblock td.content>.title,.audioblock>.title,.exampleblock>.title,.imageblock>.title,.listingblock>.title,.literalblock>.title,.stemblock>.title,.openblock>.title,.paragraph>.title,.quoteblock>.title,table.tableblock>.title,.verseblock>.title,.videoblock>.title,.dlist>.title,.olist>.title,.ulist>.title,.qlist>.title,.hdlist>.title{line-height:1.45;color:#7a2518;font-weight:400;margin-top:0;margin-bottom:.25em}
+div,dl,dt,dd,ul,ol,li,h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6,pre,form,p,blockquote,th,td{margin:0;padding:0}
+a{color:#2156a5;text-decoration:underline;line-height:inherit}
+a:hover,a:focus{color:#1d4b8f}
+a img{border:0}
+p{line-height:1.6;margin-bottom:1.25em;text-rendering:optimizeLegibility}
+p aside{font-size:.875em;line-height:1.35;font-style:italic}
+h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{font-family:"Open Sans","DejaVu Sans",sans-serif;font-weight:300;font-style:normal;color:#ba3925;text-rendering:optimizeLegibility;margin-top:1em;margin-bottom:.5em;line-height:1.0125em}
+h1 small,h2 small,h3 small,#toctitle small,.sidebarblock>.content>.title small,h4 small,h5 small,h6 small{font-size:60%;color:#e99b8f;line-height:0}
+h1{font-size:2.125em}
+h2{font-size:1.6875em}
+h3,#toctitle,.sidebarblock>.content>.title{font-size:1.375em}
+h4,h5{font-size:1.125em}
+h6{font-size:1em}
+hr{border:solid #dddddf;border-width:1px 0 0;clear:both;margin:1.25em 0 1.1875em}
+em,i{font-style:italic;line-height:inherit}
+strong,b{font-weight:bold;line-height:inherit}
+small{font-size:60%;line-height:inherit}
+code{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;font-weight:400;color:rgba(0,0,0,.9)}
+ul,ol,dl{line-height:1.6;margin-bottom:1.25em;list-style-position:outside;font-family:inherit}
+ul,ol{margin-left:1.5em}
+ul li ul,ul li ol{margin-left:1.25em;margin-bottom:0}
+ul.square li ul,ul.circle li ul,ul.disc li ul{list-style:inherit}
+ul.square{list-style-type:square}
+ul.circle{list-style-type:circle}
+ul.disc{list-style-type:disc}
+ol li ul,ol li ol{margin-left:1.25em;margin-bottom:0}
+dl dt{margin-bottom:.3125em;font-weight:bold}
+dl dd{margin-bottom:1.25em}
+blockquote{margin:0 0 1.25em;padding:.5625em 1.25em 0 1.1875em;border-left:1px solid #ddd}
+blockquote,blockquote p{line-height:1.6;color:rgba(0,0,0,.85)}
+@media screen and (min-width:768px){h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2}
+h1{font-size:2.75em}
+h2{font-size:2.3125em}
+h3,#toctitle,.sidebarblock>.content>.title{font-size:1.6875em}
+h4{font-size:1.4375em}}
+table{background:#fff;margin-bottom:1.25em;border:1px solid #dedede;word-wrap:normal}
+table thead,table tfoot{background:#f7f8f7}
+table thead tr th,table thead tr td,table tfoot tr th,table tfoot tr td{padding:.5em .625em .625em;font-size:inherit;color:rgba(0,0,0,.8);text-align:left}
+table tr th,table tr td{padding:.5625em .625em;font-size:inherit;color:rgba(0,0,0,.8)}
+table tr.even,table tr.alt{background:#f8f8f7}
+table thead tr th,table tfoot tr th,table tbody tr td,table tr td,table tfoot tr td{line-height:1.6}
+h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2;word-spacing:-.05em}
+h1 strong,h2 strong,h3 strong,#toctitle strong,.sidebarblock>.content>.title strong,h4 strong,h5 strong,h6 strong{font-weight:400}
+.center{margin-left:auto;margin-right:auto}
+.stretch{width:100%}
+.clearfix::before,.clearfix::after,.float-group::before,.float-group::after{content:" ";display:table}
+.clearfix::after,.float-group::after{clear:both}
+:not(pre).nobreak{word-wrap:normal}
+:not(pre).nowrap{white-space:nowrap}
+:not(pre).pre-wrap{white-space:pre-wrap}
+:not(pre):not([class^=L])>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background:#f7f7f8;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed}
+pre{color:rgba(0,0,0,.9);font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;line-height:1.45;text-rendering:optimizeSpeed}
+pre code,pre pre{color:inherit;font-size:inherit;line-height:inherit}
+pre>code{display:block}
+pre.nowrap,pre.nowrap pre{white-space:pre;word-wrap:normal}
+em em{font-style:normal}
+strong strong{font-weight:400}
+.keyseq{color:rgba(51,51,51,.8)}
+kbd{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;display:inline-block;color:rgba(0,0,0,.8);font-size:.65em;line-height:1.45;background:#f7f7f7;border:1px solid #ccc;border-radius:3px;box-shadow:0 1px 0 rgba(0,0,0,.2),inset 0 0 0 .1em #fff;margin:0 .15em;padding:.2em .5em;vertical-align:middle;position:relative;top:-.1em;white-space:nowrap}
+.keyseq kbd:first-child{margin-left:0}
+.keyseq kbd:last-child{margin-right:0}
+.menuseq,.menuref{color:#000}
+.menuseq b:not(.caret),.menuref{font-weight:inherit}
+.menuseq{word-spacing:-.02em}
+.menuseq b.caret{font-size:1.25em;line-height:.8}
+.menuseq i.caret{font-weight:bold;text-align:center;width:.45em}
+b.button::before,b.button::after{position:relative;top:-1px;font-weight:400}
+b.button::before{content:"[";padding:0 3px 0 2px}
+b.button::after{content:"]";padding:0 2px 0 3px}
+p a>code:hover{color:rgba(0,0,0,.9)}
+#header,#content,#footnotes,#footer{width:100%;margin:0 auto;max-width:62.5em;*zoom:1;position:relative;padding-left:.9375em;padding-right:.9375em}
+#header::before,#header::after,#content::before,#content::after,#footnotes::before,#footnotes::after,#footer::before,#footer::after{content:" ";display:table}
+#header::after,#content::after,#footnotes::after,#footer::after{clear:both}
+#content{margin-top:1.25em}
+#content::before{content:none}
+#header>h1:first-child{color:rgba(0,0,0,.85);margin-top:2.25rem;margin-bottom:0}
+#header>h1:first-child+#toc{margin-top:8px;border-top:1px solid #dddddf}
+#header>h1:only-child,body.toc2 #header>h1:nth-last-child(2){border-bottom:1px solid #dddddf;padding-bottom:8px}
+#header .details{border-bottom:1px solid #dddddf;line-height:1.45;padding-top:.25em;padding-bottom:.25em;padding-left:.25em;color:rgba(0,0,0,.6);display:flex;flex-flow:row wrap}
+#header .details span:first-child{margin-left:-.125em}
+#header .details span.email a{color:rgba(0,0,0,.85)}
+#header .details br{display:none}
+#header .details br+span::before{content:"\00a0\2013\00a0"}
+#header .details br+span.author::before{content:"\00a0\22c5\00a0";color:rgba(0,0,0,.85)}
+#header .details br+span#revremark::before{content:"\00a0|\00a0"}
+#header #revnumber{text-transform:capitalize}
+#header #revnumber::after{content:"\00a0"}
+#content>h1:first-child:not([class]){color:rgba(0,0,0,.85);border-bottom:1px solid #dddddf;padding-bottom:8px;margin-top:0;padding-top:1rem;margin-bottom:1.25rem}
+#toc{border-bottom:1px solid #e7e7e9;padding-bottom:.5em}
+#toc>ul{margin-left:.125em}
+#toc ul.sectlevel0>li>a{font-style:italic}
+#toc ul.sectlevel0 ul.sectlevel1{margin:.5em 0}
+#toc ul{font-family:"Open Sans","DejaVu Sans",sans-serif;list-style-type:none}
+#toc li{line-height:1.3334;margin-top:.3334em}
+#toc a{text-decoration:none}
+#toc a:active{text-decoration:underline}
+#toctitle{color:#7a2518;font-size:1.2em}
+@media screen and (min-width:768px){#toctitle{font-size:1.375em}
+body.toc2{padding-left:15em;padding-right:0}
+#toc.toc2{margin-top:0!important;background:#f8f8f7;position:fixed;width:15em;left:0;top:0;border-right:1px solid #e7e7e9;border-top-width:0!important;border-bottom-width:0!important;z-index:1000;padding:1.25em 1em;height:100%;overflow:auto}
+#toc.toc2 #toctitle{margin-top:0;margin-bottom:.8rem;font-size:1.2em}
+#toc.toc2>ul{font-size:.9em;margin-bottom:0}
+#toc.toc2 ul ul{margin-left:0;padding-left:1em}
+#toc.toc2 ul.sectlevel0 ul.sectlevel1{padding-left:0;margin-top:.5em;margin-bottom:.5em}
+body.toc2.toc-right{padding-left:0;padding-right:15em}
+body.toc2.toc-right #toc.toc2{border-right-width:0;border-left:1px solid #e7e7e9;left:auto;right:0}}
+@media screen and (min-width:1280px){body.toc2{padding-left:20em;padding-right:0}
+#toc.toc2{width:20em}
+#toc.toc2 #toctitle{font-size:1.375em}
+#toc.toc2>ul{font-size:.95em}
+#toc.toc2 ul ul{padding-left:1.25em}
+body.toc2.toc-right{padding-left:0;padding-right:20em}}
+#content #toc{border:1px solid #e0e0dc;margin-bottom:1.25em;padding:1.25em;background:#f8f8f7;border-radius:4px}
+#content #toc>:first-child{margin-top:0}
+#content #toc>:last-child{margin-bottom:0}
+#footer{max-width:none;background:rgba(0,0,0,.8);padding:1.25em}
+#footer-text{color:hsla(0,0%,100%,.8);line-height:1.44}
+#content{margin-bottom:.625em}
+.sect1{padding-bottom:.625em}
+@media screen and (min-width:768px){#content{margin-bottom:1.25em}
+.sect1{padding-bottom:1.25em}}
+.sect1:last-child{padding-bottom:0}
+.sect1+.sect1{border-top:1px solid #e7e7e9}
+#content h1>a.anchor,h2>a.anchor,h3>a.anchor,#toctitle>a.anchor,.sidebarblock>.content>.title>a.anchor,h4>a.anchor,h5>a.anchor,h6>a.anchor{position:absolute;z-index:1001;width:1.5ex;margin-left:-1.5ex;display:block;text-decoration:none!important;visibility:hidden;text-align:center;font-weight:400}
+#content h1>a.anchor::before,h2>a.anchor::before,h3>a.anchor::before,#toctitle>a.anchor::before,.sidebarblock>.content>.title>a.anchor::before,h4>a.anchor::before,h5>a.anchor::before,h6>a.anchor::before{content:"\00A7";font-size:.85em;display:block;padding-top:.1em}
+#content h1:hover>a.anchor,#content h1>a.anchor:hover,h2:hover>a.anchor,h2>a.anchor:hover,h3:hover>a.anchor,#toctitle:hover>a.anchor,.sidebarblock>.content>.title:hover>a.anchor,h3>a.anchor:hover,#toctitle>a.anchor:hover,.sidebarblock>.content>.title>a.anchor:hover,h4:hover>a.anchor,h4>a.anchor:hover,h5:hover>a.anchor,h5>a.anchor:hover,h6:hover>a.anchor,h6>a.anchor:hover{visibility:visible}
+#content h1>a.link,h2>a.link,h3>a.link,#toctitle>a.link,.sidebarblock>.content>.title>a.link,h4>a.link,h5>a.link,h6>a.link{color:#ba3925;text-decoration:none}
+#content h1>a.link:hover,h2>a.link:hover,h3>a.link:hover,#toctitle>a.link:hover,.sidebarblock>.content>.title>a.link:hover,h4>a.link:hover,h5>a.link:hover,h6>a.link:hover{color:#a53221}
+details,.audioblock,.imageblock,.literalblock,.listingblock,.stemblock,.videoblock{margin-bottom:1.25em}
+details{margin-left:1.25rem}
+details>summary{cursor:pointer;display:block;position:relative;line-height:1.6;margin-bottom:.625rem;-webkit-tap-highlight-color:transparent}
+details>summary::before{content:"";border:solid transparent;border-left:solid;border-width:.3em 0 .3em .5em;position:absolute;top:.5em;left:-1.25rem;transform:translateX(15%)}
+details[open]>summary::before{border:solid transparent;border-top:solid;border-width:.5em .3em 0;transform:translateY(15%)}
+details>summary::after{content:"";width:1.25rem;height:1em;position:absolute;top:.3em;left:-1.25rem}
+.admonitionblock td.content>.title,.audioblock>.title,.exampleblock>.title,.imageblock>.title,.listingblock>.title,.literalblock>.title,.stemblock>.title,.openblock>.title,.paragraph>.title,.quoteblock>.title,table.tableblock>.title,.verseblock>.title,.videoblock>.title,.dlist>.title,.olist>.title,.ulist>.title,.qlist>.title,.hdlist>.title{text-rendering:optimizeLegibility;text-align:left;font-family:"Noto Serif","DejaVu Serif",serif;font-size:1rem;font-style:italic}
+table.tableblock.fit-content>caption.title{white-space:nowrap;width:0}
+.paragraph.lead>p,#preamble>.sectionbody>[class=paragraph]:first-of-type p{font-size:1.21875em;line-height:1.6;color:rgba(0,0,0,.85)}
+.admonitionblock>table{border-collapse:separate;border:0;background:none;width:100%}
+.admonitionblock>table td.icon{text-align:center;width:80px}
+.admonitionblock>table td.icon img{max-width:none}
+.admonitionblock>table td.icon .title{font-weight:bold;font-family:"Open Sans","DejaVu Sans",sans-serif;text-transform:uppercase}
+.admonitionblock>table td.content{padding-left:1.125em;padding-right:1.25em;border-left:1px solid #dddddf;color:rgba(0,0,0,.6);word-wrap:anywhere}
+.admonitionblock>table td.content>:last-child>:last-child{margin-bottom:0}
+.exampleblock>.content{border:1px solid #e6e6e6;margin-bottom:1.25em;padding:1.25em;background:#fff;border-radius:4px}
+.exampleblock>.content>:first-child{margin-top:0}
+.exampleblock>.content>:last-child{margin-bottom:0}
+.sidebarblock{border:1px solid #dbdbd6;margin-bottom:1.25em;padding:1.25em;background:#f3f3f2;border-radius:4px}
+.sidebarblock>:first-child{margin-top:0}
+.sidebarblock>:last-child{margin-bottom:0}
+.sidebarblock>.content>.title{color:#7a2518;margin-top:0;text-align:center}
+.exampleblock>.content>:last-child>:last-child,.exampleblock>.content .olist>ol>li:last-child>:last-child,.exampleblock>.content .ulist>ul>li:last-child>:last-child,.exampleblock>.content .qlist>ol>li:last-child>:last-child,.sidebarblock>.content>:last-child>:last-child,.sidebarblock>.content .olist>ol>li:last-child>:last-child,.sidebarblock>.content .ulist>ul>li:last-child>:last-child,.sidebarblock>.content .qlist>ol>li:last-child>:last-child{margin-bottom:0}
+.literalblock pre,.listingblock>.content>pre{border-radius:4px;overflow-x:auto;padding:1em;font-size:.8125em}
+@media screen and (min-width:768px){.literalblock pre,.listingblock>.content>pre{font-size:.90625em}}
+@media screen and (min-width:1280px){.literalblock pre,.listingblock>.content>pre{font-size:1em}}
+.literalblock pre,.listingblock>.content>pre:not(.highlight),.listingblock>.content>pre[class=highlight],.listingblock>.content>pre[class^="highlight "]{background:#f7f7f8}
+.literalblock.output pre{color:#f7f7f8;background:rgba(0,0,0,.9)}
+.listingblock>.content{position:relative}
+.listingblock code[data-lang]::before{display:none;content:attr(data-lang);position:absolute;font-size:.75em;top:.425rem;right:.5rem;line-height:1;text-transform:uppercase;color:inherit;opacity:.5}
+.listingblock:hover code[data-lang]::before{display:block}
+.listingblock.terminal pre .command::before{content:attr(data-prompt);padding-right:.5em;color:inherit;opacity:.5}
+.listingblock.terminal pre .command:not([data-prompt])::before{content:"$"}
+.listingblock pre.highlightjs{padding:0}
+.listingblock pre.highlightjs>code{padding:1em;border-radius:4px}
+.listingblock pre.prettyprint{border-width:0}
+.prettyprint{background:#f7f7f8}
+pre.prettyprint .linenums{line-height:1.45;margin-left:2em}
+pre.prettyprint li{background:none;list-style-type:inherit;padding-left:0}
+pre.prettyprint li code[data-lang]::before{opacity:1}
+pre.prettyprint li:not(:first-child) code[data-lang]::before{display:none}
+table.linenotable{border-collapse:separate;border:0;margin-bottom:0;background:none}
+table.linenotable td[class]{color:inherit;vertical-align:top;padding:0;line-height:inherit;white-space:normal}
+table.linenotable td.code{padding-left:.75em}
+table.linenotable td.linenos{border-right:1px solid;opacity:.35;padding-right:.5em}
+pre.pygments .lineno{border-right:1px solid;opacity:.35;display:inline-block;margin-right:.75em}
+pre.pygments .lineno::before{content:"";margin-right:-.125em}
+.quoteblock{margin:0 1em 1.25em 1.5em;display:table}
+.quoteblock:not(.excerpt)>.title{margin-left:-1.5em;margin-bottom:.75em}
+.quoteblock blockquote,.quoteblock p{color:rgba(0,0,0,.85);font-size:1.15rem;line-height:1.75;word-spacing:.1em;letter-spacing:0;font-style:italic;text-align:justify}
+.quoteblock blockquote{margin:0;padding:0;border:0}
+.quoteblock blockquote::before{content:"\201c";float:left;font-size:2.75em;font-weight:bold;line-height:.6em;margin-left:-.6em;color:#7a2518;text-shadow:0 1px 2px rgba(0,0,0,.1)}
+.quoteblock blockquote>.paragraph:last-child p{margin-bottom:0}
+.quoteblock .attribution{margin-top:.75em;margin-right:.5ex;text-align:right}
+.verseblock{margin:0 1em 1.25em}
+.verseblock pre{font-family:"Open Sans","DejaVu Sans",sans-serif;font-size:1.15rem;color:rgba(0,0,0,.85);font-weight:300;text-rendering:optimizeLegibility}
+.verseblock pre strong{font-weight:400}
+.verseblock .attribution{margin-top:1.25rem;margin-left:.5ex}
+.quoteblock .attribution,.verseblock .attribution{font-size:.9375em;line-height:1.45;font-style:italic}
+.quoteblock .attribution br,.verseblock .attribution br{display:none}
+.quoteblock .attribution cite,.verseblock .attribution cite{display:block;letter-spacing:-.025em;color:rgba(0,0,0,.6)}
+.quoteblock.abstract blockquote::before,.quoteblock.excerpt blockquote::before,.quoteblock .quoteblock blockquote::before{display:none}
+.quoteblock.abstract blockquote,.quoteblock.abstract p,.quoteblock.excerpt blockquote,.quoteblock.excerpt p,.quoteblock .quoteblock blockquote,.quoteblock .quoteblock p{line-height:1.6;word-spacing:0}
+.quoteblock.abstract{margin:0 1em 1.25em;display:block}
+.quoteblock.abstract>.title{margin:0 0 .375em;font-size:1.15em;text-align:center}
+.quoteblock.excerpt>blockquote,.quoteblock .quoteblock{padding:0 0 .25em 1em;border-left:.25em solid #dddddf}
+.quoteblock.excerpt,.quoteblock .quoteblock{margin-left:0}
+.quoteblock.excerpt blockquote,.quoteblock.excerpt p,.quoteblock .quoteblock blockquote,.quoteblock .quoteblock p{color:inherit;font-size:1.0625rem}
+.quoteblock.excerpt .attribution,.quoteblock .quoteblock .attribution{color:inherit;font-size:.85rem;text-align:left;margin-right:0}
+p.tableblock:last-child{margin-bottom:0}
+td.tableblock>.content{margin-bottom:1.25em;word-wrap:anywhere}
+td.tableblock>.content>:last-child{margin-bottom:-1.25em}
+table.tableblock,th.tableblock,td.tableblock{border:0 solid #dedede}
+table.grid-all>*>tr>*{border-width:1px}
+table.grid-cols>*>tr>*{border-width:0 1px}
+table.grid-rows>*>tr>*{border-width:1px 0}
+table.frame-all{border-width:1px}
+table.frame-ends{border-width:1px 0}
+table.frame-sides{border-width:0 1px}
+table.frame-none>colgroup+*>:first-child>*,table.frame-sides>colgroup+*>:first-child>*{border-top-width:0}
+table.frame-none>:last-child>:last-child>*,table.frame-sides>:last-child>:last-child>*{border-bottom-width:0}
+table.frame-none>*>tr>:first-child,table.frame-ends>*>tr>:first-child{border-left-width:0}
+table.frame-none>*>tr>:last-child,table.frame-ends>*>tr>:last-child{border-right-width:0}
+table.stripes-all tr,table.stripes-odd tr:nth-of-type(odd),table.stripes-even tr:nth-of-type(even),table.stripes-hover tr:hover{background:#f8f8f7}
+th.halign-left,td.halign-left{text-align:left}
+th.halign-right,td.halign-right{text-align:right}
+th.halign-center,td.halign-center{text-align:center}
+th.valign-top,td.valign-top{vertical-align:top}
+th.valign-bottom,td.valign-bottom{vertical-align:bottom}
+th.valign-middle,td.valign-middle{vertical-align:middle}
+table thead th,table tfoot th{font-weight:bold}
+tbody tr th{background:#f7f8f7}
+tbody tr th,tbody tr th p,tfoot tr th,tfoot tr th p{color:rgba(0,0,0,.8);font-weight:bold}
+p.tableblock>code:only-child{background:none;padding:0}
+p.tableblock{font-size:1em}
+ol{margin-left:1.75em}
+ul li ol{margin-left:1.5em}
+dl dd{margin-left:1.125em}
+dl dd:last-child,dl dd:last-child>:last-child{margin-bottom:0}
+ol>li p,ul>li p,ul dd,ol dd,.olist .olist,.ulist .ulist,.ulist .olist,.olist .ulist{margin-bottom:.625em}
+ul.checklist,ul.none,ol.none,ul.no-bullet,ol.no-bullet,ol.unnumbered,ul.unstyled,ol.unstyled{list-style-type:none}
+ul.no-bullet,ol.no-bullet,ol.unnumbered{margin-left:.625em}
+ul.unstyled,ol.unstyled{margin-left:0}
+ul.checklist>li>p:first-child{margin-left:-1em}
+ul.checklist>li>p:first-child>.fa-square-o:first-child,ul.checklist>li>p:first-child>.fa-check-square-o:first-child{width:1.25em;font-size:.8em;position:relative;bottom:.125em}
+ul.checklist>li>p:first-child>input[type=checkbox]:first-child{margin-right:.25em}
+ul.inline{display:flex;flex-flow:row wrap;list-style:none;margin:0 0 .625em -1.25em}
+ul.inline>li{margin-left:1.25em}
+.unstyled dl dt{font-weight:400;font-style:normal}
+ol.arabic{list-style-type:decimal}
+ol.decimal{list-style-type:decimal-leading-zero}
+ol.loweralpha{list-style-type:lower-alpha}
+ol.upperalpha{list-style-type:upper-alpha}
+ol.lowerroman{list-style-type:lower-roman}
+ol.upperroman{list-style-type:upper-roman}
+ol.lowergreek{list-style-type:lower-greek}
+.hdlist>table,.colist>table{border:0;background:none}
+.hdlist>table>tbody>tr,.colist>table>tbody>tr{background:none}
+td.hdlist1,td.hdlist2{vertical-align:top;padding:0 .625em}
+td.hdlist1{font-weight:bold;padding-bottom:1.25em}
+td.hdlist2{word-wrap:anywhere}
+.literalblock+.colist,.listingblock+.colist{margin-top:-.5em}
+.colist td:not([class]):first-child{padding:.4em .75em 0;line-height:1;vertical-align:top}
+.colist td:not([class]):first-child img{max-width:none}
+.colist td:not([class]):last-child{padding:.25em 0}
+.thumb,.th{line-height:0;display:inline-block;border:4px solid #fff;box-shadow:0 0 0 1px #ddd}
+.imageblock.left{margin:.25em .625em 1.25em 0}
+.imageblock.right{margin:.25em 0 1.25em .625em}
+.imageblock>.title{margin-bottom:0}
+.imageblock.thumb,.imageblock.th{border-width:6px}
+.imageblock.thumb>.title,.imageblock.th>.title{padding:0 .125em}
+.image.left,.image.right{margin-top:.25em;margin-bottom:.25em;display:inline-block;line-height:0}
+.image.left{margin-right:.625em}
+.image.right{margin-left:.625em}
+a.image{text-decoration:none;display:inline-block}
+a.image object{pointer-events:none}
+sup.footnote,sup.footnoteref{font-size:.875em;position:static;vertical-align:super}
+sup.footnote a,sup.footnoteref a{text-decoration:none}
+sup.footnote a:active,sup.footnoteref a:active{text-decoration:underline}
+#footnotes{padding-top:.75em;padding-bottom:.75em;margin-bottom:.625em}
+#footnotes hr{width:20%;min-width:6.25em;margin:-.25em 0 .75em;border-width:1px 0 0}
+#footnotes .footnote{padding:0 .375em 0 .225em;line-height:1.3334;font-size:.875em;margin-left:1.2em;margin-bottom:.2em}
+#footnotes .footnote a:first-of-type{font-weight:bold;text-decoration:none;margin-left:-1.05em}
+#footnotes .footnote:last-of-type{margin-bottom:0}
+#content #footnotes{margin-top:-.625em;margin-bottom:0;padding:.75em 0}
+.gist .file-data>table{border:0;background:#fff;width:100%;margin-bottom:0}
+.gist .file-data>table td.line-data{width:99%}
+div.unbreakable{page-break-inside:avoid}
+.big{font-size:larger}
+.small{font-size:smaller}
+.underline{text-decoration:underline}
+.overline{text-decoration:overline}
+.line-through{text-decoration:line-through}
+.aqua{color:#00bfbf}
+.aqua-background{background:#00fafa}
+.black{color:#000}
+.black-background{background:#000}
+.blue{color:#0000bf}
+.blue-background{background:#0000fa}
+.fuchsia{color:#bf00bf}
+.fuchsia-background{background:#fa00fa}
+.gray{color:#606060}
+.gray-background{background:#7d7d7d}
+.green{color:#006000}
+.green-background{background:#007d00}
+.lime{color:#00bf00}
+.lime-background{background:#00fa00}
+.maroon{color:#600000}
+.maroon-background{background:#7d0000}
+.navy{color:#000060}
+.navy-background{background:#00007d}
+.olive{color:#606000}
+.olive-background{background:#7d7d00}
+.purple{color:#600060}
+.purple-background{background:#7d007d}
+.red{color:#bf0000}
+.red-background{background:#fa0000}
+.silver{color:#909090}
+.silver-background{background:#bcbcbc}
+.teal{color:#006060}
+.teal-background{background:#007d7d}
+.white{color:#bfbfbf}
+.white-background{background:#fafafa}
+.yellow{color:#bfbf00}
+.yellow-background{background:#fafa00}
+span.icon>.fa{cursor:default}
+a span.icon>.fa{cursor:inherit}
+.admonitionblock td.icon [class^="fa icon-"]{font-size:2.5em;text-shadow:1px 1px 2px rgba(0,0,0,.5);cursor:default}
+.admonitionblock td.icon .icon-note::before{content:"\f05a";color:#19407c}
+.admonitionblock td.icon .icon-tip::before{content:"\f0eb";text-shadow:1px 1px 2px rgba(155,155,0,.8);color:#111}
+.admonitionblock td.icon .icon-warning::before{content:"\f071";color:#bf6900}
+.admonitionblock td.icon .icon-caution::before{content:"\f06d";color:#bf3400}
+.admonitionblock td.icon .icon-important::before{content:"\f06a";color:#bf0000}
+.conum[data-value]{display:inline-block;color:#fff!important;background:rgba(0,0,0,.8);border-radius:50%;text-align:center;font-size:.75em;width:1.67em;height:1.67em;line-height:1.67em;font-family:"Open Sans","DejaVu Sans",sans-serif;font-style:normal;font-weight:bold}
+.conum[data-value] *{color:#fff!important}
+.conum[data-value]+b{display:none}
+.conum[data-value]::after{content:attr(data-value)}
+pre .conum[data-value]{position:relative;top:-.125em}
+b.conum *{color:inherit!important}
+.conum:not([data-value]):empty{display:none}
+dt,th.tableblock,td.content,div.footnote{text-rendering:optimizeLegibility}
+h1,h2,p,td.content,span.alt,summary{letter-spacing:-.01em}
+p strong,td.content strong,div.footnote strong{letter-spacing:-.005em}
+p,blockquote,dt,td.content,span.alt,summary{font-size:1.0625rem}
+p{margin-bottom:1.25rem}
+.sidebarblock p,.sidebarblock dt,.sidebarblock td.content,p.tableblock{font-size:1em}
+.exampleblock>.content{background:#fffef7;border-color:#e0e0dc;box-shadow:0 1px 4px #e0e0dc}
+.print-only{display:none!important}
+@page{margin:1.25cm .75cm}
+@media print{*{box-shadow:none!important;text-shadow:none!important}
+html{font-size:80%}
+a{color:inherit!important;text-decoration:underline!important}
+a.bare,a[href^="#"],a[href^="mailto:"]{text-decoration:none!important}
+a[href^="http:"]:not(.bare)::after,a[href^="https:"]:not(.bare)::after{content:"(" attr(href) ")";display:inline-block;font-size:.875em;padding-left:.25em}
+abbr[title]{border-bottom:1px dotted}
+abbr[title]::after{content:" (" attr(title) ")"}
+pre,blockquote,tr,img,object,svg{page-break-inside:avoid}
+thead{display:table-header-group}
+svg{max-width:100%}
+p,blockquote,dt,td.content{font-size:1em;orphans:3;widows:3}
+h2,h3,#toctitle,.sidebarblock>.content>.title{page-break-after:avoid}
+#header,#content,#footnotes,#footer{max-width:none}
+#toc,.sidebarblock,.exampleblock>.content{background:none!important}
+#toc{border-bottom:1px solid #dddddf!important;padding-bottom:0!important}
+body.book #header{text-align:center}
+body.book #header>h1:first-child{border:0!important;margin:2.5em 0 1em}
+body.book #header .details{border:0!important;display:block;padding:0!important}
+body.book #header .details span:first-child{margin-left:0!important}
+body.book #header .details br{display:block}
+body.book #header .details br+span::before{content:none!important}
+body.book #toc{border:0!important;text-align:left!important;padding:0!important;margin:0!important}
+body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-break-before:always}
+.listingblock code[data-lang]::before{display:block}
+#footer{padding:0 .9375em}
+.hide-on-print{display:none!important}
+.print-only{display:block!important}
+.hide-for-print{display:none!important}
+.show-for-print{display:inherit!important}}
+@media amzn-kf8,print{#header>h1:first-child{margin-top:1.25rem}
+.sect1{padding:0!important}
+.sect1+.sect1{border:0}
+#footer{background:none}
+#footer-text{color:rgba(0,0,0,.6);font-size:.9em}}
+@media amzn-kf8{#header,#content,#footnotes,#footer{padding:0}}
+</style>
+</head>
+<body class="article">
+<div id="header">
+<h1>The Dominion</h1>
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="_dominites">Dominites</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Nation known as the Dominion of Order, run by the Orthodoxy Order. Mockingly called the Oh-Oh <strong>hand to forehead</strong> by enemies, reflecting a view of being stagnant. Colloquially referred to as the ‘Grey brothers' due to grey robes of hierarchy. Order claim to be initial governance of continent and hence rightful rulers. Disdained by other groups due to strict adherence to archaic books/rules.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_populace">Populace:</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Very amalgamated to point of being a new race with little variance between average people. Heights vary between 5ft and 5½ft, light thin hair cover whole body except scalp and with thicker patches at jawline which grow into facial hair with age. Military and Church have prescribed facial hair styles, while statesmen can get slightly creative. Skin is predominantly tanned/leather Brown, but with some mottling. All have dark vision. Non-firsts have three lines tattooed along scalp and right forearm is branded upon coming of age to denote how they serve a branch.</p>
+</div>
+<div class="paragraph">
+<p>Generally wear thick woolen cloaks and scarves outdoors for most of the year due to being mildly cold climate. Casual wear is long tunics, with open chest design for males. Half, three quarter and full length sleeves. Foot/calf wraps and sandals. Grey hood-hats.
+Adornments are minor jewels amongst politicians (typically rings or earrings), metal jewelry amongst the military (typically torques and bands) and the Church wear fine cloths, and small jewels. Minimal use of foundation/blush for effect of normalcy.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_economy">Economy:</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_production">Production</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Mass farms run by the state, producing corn and grains.</p>
+</li>
+<li>
+<p>Individual <mark>Delilahca plantations</mark> produce the one stimulant/drug of the Dominion.</p>
+</li>
+<li>
+<p>Mass boar farms.</p>
+</li>
+<li>
+<p>Chunky oxen type beast of burden bred in similar farms.</p>
+</li>
+<li>
+<p>Elite horses are smaller cottage industry</p>
+</li>
+<li>
+<p>Only hunting/gathering is ceremonial annual hunt in autumn and 'picking day' in spring</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_trade">Trade</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Total war industry, no foreign markets of note. Only internal trade. Selling to military institutes or householders</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_currency">Currency</h3>
+<div class="paragraph">
+<p>Householders and first borns use currency of silver-bits, while others rely on department script to meet their needs.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_governance">Governance:</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>State and church and military are intertwined. Three councils, with triumvirate ruling overall. The triumvirate are known as the Firsts of the council&#8217;s, similar to eldest child being firsts of a family. Historical texts guide the triumvirate, their interpretation sets the rules and those below replicate it. No allowances for discretion/liberties at lower levels. Military and Church Firsts follow promotion through traditional hierarchy, while the state (aka traditional politicians) are from specific families, alliances form and voting blocs deliver a leader. The families oft try to maneuver members within church and military, but that usually results in retaliation such as failing to protect someone or uncovering sins within a family.</p>
+</div>
+<div class="paragraph">
+<p>Each village has an outpost, a church and a state officer (mix of mayor, taxman and judge). These all sit under their respective power structures. Deviation from established rules results in removal and sometimes disbanding of village.</p>
+</div>
+<div class="paragraph">
+<p>Healing magic is domain of church, other types are domain of military, and the state disallows all but the simplest cantrips.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_history">History</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Early history of being first nation, with a bloody massacre which rooted out differing ideals and institutionalised against divergence. Unspoken prejudices against those further from the statistical norm. Long peaceful rule until new archives were uncovered. Reemergence drove push to integrate all the new rules, which resulted in push back particularly amongst the less homogenised.
+Church regained preeminence it had slowly lost, attaining equal footing with state rulers. Post schism/troubles the military then became another equal after heroic action avoided state and church council being wiped out.</p>
+</div>
+<div class="paragraph">
+<p>State sponsored religion of Carerism, following the commandments of “Saint Cares, The Good”. Originally a lowly clerk in monastery but published works linking the uncovered historical documents to spiritual decrees etc even if very tenuous or taken out of context.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_culture">Culture:</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Very blocky architecture with each building type having a single design. Sprawling cities act as hubs providing labour for expansive farming reached by public transport. Simplistic building skills, outside a few metropolitan cities, nothing taller than two storeys except wooden frame watch towers. Main room of domestic building has a domed ceiling. Military ones have no domes. Churches have four domed ceilings in corners, with central congregation area being an open circular hole instead of roof.
+Houses left plain except main room, which may be adorned with images of the leaders, moments in history or religious symbols. No new art, it is all about how accurately ancient art can be reproduced. The only creative endeavour is trying new materials, mediums or scale</p>
+</div>
+<div class="sect2">
+<h3 id="_symbolism">Symbolism:</h3>
+<div class="paragraph">
+<p>Flint axe - first warriors. Elk horn - first to unify and band in times of trouble. Red star - sign which led them to throw down those that diverged.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_idioms">Idioms:</h3>
+<div class="paragraph">
+<p>“As it was before, so shall it be again” - A statement covering expectation of winning war, morals of following the old ways, and to bolster/reassure people during trying times.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_entertainment">Entertainment:</h3>
+<div class="paragraph">
+<p>Gory stories glorifying the war and tales with blatant moral value depiction
+Nation anthem, religious hymns and some whistling.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_food">Food:</h3>
+<div class="paragraph">
+<p>Meat Jerky. Salted meat/bacon steaks. Flat round grainbread. Cornbread. Corn cobs. Popcorn (for religious celebrations). Corn chips and mashed dips with light seasoning like paprika</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_calendartime_keeping">Calendar/Time Keeping:</h3>
+<div class="paragraph">
+<p>The early days. The golden age (long). The second golden age (brief period with new historical documents). The time of sinners (brief period of unrest, protest, etc). The war (long).
+Annual calendar: Red star night/golden new year, the second new moon of autumn. The deliverance (discovery of new docs). The enlightening (recognising the new works) The soldiers week (military parades, tributes to fallen soldiers etc).
+Daily: First light (dawn), high light (noon), low light(dusk), last light (full night). Candles/half candles used as approximation relative to the time points.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_personal_lives">Personal lives</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_family">Family:</h3>
+<div class="paragraph">
+<p>Family firsts (mum and dad). The firstborn of each gender. The children of the people (subsequent children who will go into a role of the state, military or church). If the first four children are of the same gender, the eldest becomes prime and the second eldest becomes first. If four more children are had without variance, the first becomes a prime etc.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_naming_system">Naming System:</h3>
+<div class="paragraph">
+<p>Prime/first: X, prime/first of Y &#8594; (Householder) X, prime/first of Y
+CotP: X blessed upon Y &#8594; Rank/duty X of Church/State/Military</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_marriagecourtship">Marriage/Courtship:</h3>
+<div class="paragraph">
+<p>Primes and firsts are schooled together, and encouraged to pair up from 10 years or older. At 16 pairs are bonded permanently and at 18 given a home/section of the home.
+Children of the people are free to mix with each other, no permanency is expected, but it is allowed as long as it does not interfer with duty. No marriage and children are given over to their parents/prime/firsts to raise as children of the people.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_blood_mixing">Blood Mixing:</h3>
+<div class="paragraph">
+<p>Though history had mingling which created the homogenous appearance of the Dominion, now they do not mix with foreigners. Primes/firsts should not mix blood with children of the people.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_pregnancy">Pregnancy:</h3>
+<div class="paragraph">
+<p>No limitations on pregnancy. Primes/firsts first birth is treated cautiously, subsequent ones not so much. Pregnancy of CotP changes nothing until final month when they are given leave to go home and have the birth.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_birth">Birth:</h3>
+<div class="paragraph">
+<p>Midwives/other mothers guide and aid. Church provides medical aid.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_guardians">Guardians:</h3>
+<div class="paragraph">
+<p>Offspring of CotP are raised by the CotP’s parent, prime or first (according to capacity) and treated identically to their own CotP.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_children">Children:</h3>
+<div class="paragraph">
+<p>Raised by the householders until the age of 5 when schooling starts for primes/firsts, covering a mix of religion, state, history, householder duties etc. At age ten, schooling in trades begins, at 14 they choose a trade/calling and then at 17-18 they begin plying trade. Whereas CotP at 5 have one year religious instruction, one year civil lessons, one year survival training then a year of aptitude testing after which they leave home and join the appropriate branch for eight years of apprenticeship before coming of age ceremony and joining branch as active member.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_adulthood">Adulthood:</h3>
+<div class="paragraph">
+<p>CotP have adult responsibilities at 16/coming of age. Primes/firsts are young adults from 16-18, before they become householders. Coming of age ceremony for the village, where all CotP take their marking.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_elders">Elders:</h3>
+<div class="paragraph">
+<p>Householders are first class citizens, CotP must defer to them socially or feign politeness during duties.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_death_and_burial_practices">Death and Burial Practices:</h3>
+<div class="paragraph">
+<p>Right hands are removed, returned home and a ceremony held. Bodies are left/disposed of according to circumstance. Hands are embalmed into closed fist, cupped palm or flathand/handshake as per duty of CotP. Hands of householder are done in shape with fingers bent so as pair they can be united in a grasp/clasp, after both are dead.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_common_names">Common Names:</h3>
+<div class="paragraph">
+<p>Amla (f), Arwna (f), Arwnag (f), Laur’aleera (f), Namlak (f), Naraida (f), R’alee (f), Raida (f), Shultyrra (f), Tyrra (f), Ulammara (f), Umugrae (f)
+Aeson (m), Gushasar (m), G’nym (m), Jhanag (m), Lugnym (m), Mog (m), Norlag (m), Norlak (m), Orymkol (m), Ryulg (m), Zaorth (m), Zao (m)
+Rostern (n)</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_inheritance">Inheritance:</h3>
+<div class="paragraph">
+<p>Householders &#8594; Primes &#8594; Firsts &#8594; back to the state.
+CotP &#8594; Children (Keepsakes) or State (valuables)</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_classcaste">Class/Caste:</h3>
+<div class="paragraph">
+<p>Rulers, upper hierarchy of institutes
+Householders
+Primes
+Firsts
+CotP</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_land_ownership">Land Ownership:</h3>
+<div class="paragraph">
+<p>Householders are granted freehold over land while they live, this may pass on as per primes/firsts, or may revert to state when not required.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_gender_structuresroles">Gender Structures/Roles:</h3>
+<div class="paragraph">
+<p>Householders/primes/firsts: Male makes decisions, female acts as advisor or proxy decider
+CotP: State and Military no difference, Church females can not lead spiritual ceremonies as the person acts as a proxy/analog for the original people who were male.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_sexual_identity">Sexual Identity:</h3>
+<div class="paragraph">
+<p>For the householders/primes/first there is a duty to perform het relationship, others allowed if don’t interfer (e.g. no less than one offspring a year)
+Amongst CotP anything goes.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_courtesymanners">Courtesy/Manners:</h3>
+<div class="paragraph">
+<p>Strangers treated according to hierarchical relationship. Clasping hands so back hand face other person, to show role. Touching back of hand to forehead is high of politeness, to signify recognition and filing of knowledge. Who pulls hand to forehead first is tricky social etiquette based on role, seniority etc. Not reciprocating is a severe rebuke/non-recognition of other.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_lawslegal_code">Laws/Legal Code:</h3>
+<div class="paragraph">
+<p>Internal laws for institutes enforced by own power structure. Inter-discipline laws involve panel of person from each discipline to convene, look at historical documents and give judgement to be ratified by The State Firsts.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_punishment">Punishment:</h3>
+<div class="paragraph">
+<p>General crimes punished with public shame. Standing in town centre reciting misdeeds for set period of time.
+Suicide squads. Drafted into military squads assigned with most dangerous action. If survive 1/2/3 etc years (as matching crime) then is reintroduced to previous role in society.
+Traitorous or heretical crimes. Death by trampling. Staked out on a road with a wooden box over head, village people walk over body of the person while wearing iron studded wooden soled sandals. Then general traffic resumes, carts/oxen will cross the person. If alive at the end of the day, then a sledgehammer is driven through the box.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_drugs">Drugs:</h3>
+<div class="paragraph">
+<p>Delilahca (a saffron coloured flower, with blue edging) pollen is smellt to instill euphoria and visions for church clergy attempting to contact the gods. Civilians drink alcohol. Military chew the roots of the delilahca to maintain alertness, or before combat drink a brew crafted from it to lessen pain and heighten awareness.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_technology">Technology:</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Healing and war magics are of reasonable advancement, everything esle is considered outdated.
+Ensorcelled wood to resist fire. Trebuchets blessed to improve aim/range. First salvo of boulders with runes to shield from scry/divination, to not alert enemy of attack initiation.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_cultural_beliefs">Cultural Beliefs:</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_ancestry">Ancestry:</h3>
+<div class="paragraph">
+<p>Ancestors are revered</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_paragonsheroes">Paragons/Heroes:</h3>
+<div class="paragraph">
+<p>The discoverer of the ancient texts - Revered for his persistence and vision
+A martyr who locked himself in an Inn of protesters, which he set fire to and begun the first uprising/cleansing
+Heroes are seen as flawless.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_healthmedicine">Health/Medicine:</h3>
+<div class="paragraph">
+<p>Injury/wounds are seen as patriotic. Disease is considered a curse on the weak. Diet of root vegetables to improve their health.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_daynightseason">Day/Night/Season:</h3>
+<div class="paragraph">
+<p>Sunset is an important time, symbolically representing the turning of history/passage of time and thus joining the present dominion to ancestors etc</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_astronomy">Astronomy:</h3>
+<div class="paragraph">
+<p>Celestial bodies are considered to be ancestors watching over. A cloudy/starless night during summer or spring, signals displeasure.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_cosmology">Cosmology:</h3>
+<div class="paragraph">
+<p>Stable orbit around stable star</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_history_2">History:</h3>
+<div class="paragraph">
+<p>The golden age is seen as the pinnacle to which all must strive/follow. Earlier history of variety, tribes etc is looked down on as savage. Historical knowledge regards the golden age, myths about savage age, the rules and modern attribution of them. Cultural/original reason is omitted.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_the_natural_world">The Natural World:</h3>
+<div class="paragraph">
+<p>Nature is accepted but not overly embraced.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_the_artificial_world">The Artificial World:</h3>
+<div class="paragraph">
+<p>Creations of the Dominion and predecessors are viewed positively, others are seen as either abominations or cheap copies/mockeries.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_cryptid">Cryptid:</h3>
+<div class="paragraph">
+<p>A race of Were-sabre-toothed-tigers believed to predate the races and are seen as linked to the Dominion, particularly in terms of the light hair/fur and mottled skin on citizens. Myth says the blending/homogenisation has allowed them to infiltrate society and then some have their blood running through them</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_demographics">Demographics:</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_townsvillagescities">Towns/Villages/Cities:</h3>
+<div class="paragraph">
+<p>Villages are rare, with large towns and small cities being a more typical occurrence, and larger metropolitan cities exist on important historical points. The towns largely flow together, with barely an hours walk between them, cities forming when the towns expand and merge. Villages have more space, as usually in less attractive areas or on edge to allow room for local cottage industries. More urbanistic than rural, as much rural work is treated almost like factory work.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_migrationpopulation_movement">Migration/Population Movement:</h3>
+<div class="paragraph">
+<p>People may move around due to space constraints on expanding family areas. People move due to duty e.g. army, otherwise there is little movement of ‘home’</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_the_frontier">The Frontier:</h3>
+<div class="paragraph">
+<p>The battle frontier has increased military structures / barracks but otherwise similar. Hinterlands are more wild nature.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_military">Military:</h3>
+<div class="paragraph">
+<p>Professional military of all genders, and outside classical class structure/a class of their own.
+Plain functional weapons and armor. New technology of opponents sometimes is taken and refactored. No individuals in warfare, everything is about the squad/unit/dominion.
+Magic is used for healing (war chaplains), for aiding groups (NCOs training in beneficial types) and for damage/attacks (war mages attached to squads or forming squads of own).</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2022-08-02 13:01:19 +1200
+</div>
+</div>
+</body>
+</html>
