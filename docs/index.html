@@ -60,25 +60,6 @@
   document.getElementById(indexName).style.display = "inline";     
   }
 </script>
-    
-<!-- File input.  When changed, file inputs produce a FileList object (this.files) - the first item within being the first selected file. -->
-<input type="file" onchange="fileChange(this.files[0])" />
-
-<script type="text/javascript">
-  function randomObjects(objFile, numberObj){
-    fetch(objFile)
-      .then(function (response) {
-        return response.json();
-      })
-      .then(function (data) {
-        appendData(data);
-      })
-      .catch(function (err) {
-        console.log(err);
-      });
-  }
-  
-</script>
 
 </body>
 </html>
