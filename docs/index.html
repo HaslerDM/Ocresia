@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Endless War Campaign</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="keywords" content="Ocresia">
+<style>
+    body {background-color:#ffffff;background-repeat:no-repeat;background-position:top left;background-attachment:fixed;}
+    h1{font-family:Arial, sans-serif;color:#000000;background-color:#ffffff;}
+    p {font-family:Georgia, serif;font-size:14px;font-style:normal;font-weight:normal;color:#000000;background-color:#ffffff;}
+</style>
+ 
+</script>
+<link href="https://fonts.googleapis.com/css?family=Fira+Sans&display=swap" rel="stylesheet"/>
+
+</head>
+<body>
+<div>
+  <div class="w3-bar w3-black">
+    <button class="w3-bar-item w3-button" onclick="openIndex('Party')">Party</button>
+    <button class="w3-bar-item w3-button" onclick="openIndex('Lore')">Lore</button>
+    <button class="w3-bar-item w3-button" onclick="openIndex('Mesmo')">Mesmolignes</button>   
+    <button class="w3-bar-item w3-button" onclick="openIndex('Orle')">Orle</button>
+    <button class="w3-bar-item w3-button" onclick="openIndex('Birton')">Birton</button>
+<!--
+    <button class="w3-bar-item w3-button" onclick="openIndex('Ferdie')">Ferdieuillon</button>
+    <button class="w3-bar-item w3-button" onclick="openIndex('Meunny')">Meunny</button>
+    <button class="w3-bar-item w3-button" onclick="openIndex('Grielle')">Grielle</button>
+    <button class="w3-bar-item w3-button" onclick="openIndex('Regions')">Regions</button>
+-->
+  </div>
+    <iframe id="Party" class="w3-container Index" src="DaMurderHobos.html" name="PartyIndex" height=900 width=350></iframe>
+    <iframe id="Lore" class="w3-container Index" style="display:none" src="Lore.html" name="LoreIndex" height=900 width=350></iframe>
+    <iframe id="Mesmo" class="w3-container Index" style="display:none" src="Mesmolignes.html" name="MesmoIndex" height=900 width=350></iframe>
+    <iframe id="Orle" class="w3-container Index" style="display:none" src="Orle.html" name="OrleIndex" height=900 width=350></iframe>
+    <iframe id="Birton" class="w3-container Index" style="display:none" src="Birton.html" name="BirtIndex" height=900 width=350></iframe>
+    
+<!--    
+    <iframe id="Ferdie" class="w3-container Index" style="display:none" src="Ferdieuillon.html" name="FerdIndex" height=900 width=350></iframe>
+    <iframe id="Meunny" class="w3-container Index" style="display:none" src="Meunny.html" name="MeuIndex" height=900 width=350></iframe>
+    <iframe id="Grielle" class="w3-container Index" style="display:none" src="Grielle.html" name="GriIndex" height=900 width=350></iframe>
+    <iframe id="Regions" class="w3-container Index" style="display:none" src="Regions.html" name="RegIndex" height=900 width=350></iframe>
+-->    
+    
+    <iframe name="InfoDoc" height=900 width=1100></iframe>
+    <iframe name="Party" src="DaMurderHobos/PartyCoverage.html" height=900 width=300></iframe>
+  </div>
+
+</div>
+
+<script type="text/javascript">
+  document.getElementById("action");
+  function openIndex(indexName){
+    console.log("Executing action");
+      var i;
+      var x = document.getElementsByClassName("Index");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+  document.getElementById(indexName).style.display = "inline";     
+  }
+</script>
+    
+<!-- File input.  When changed, file inputs produce a FileList object (this.files) - the first item within being the first selected file. -->
+<input type="file" onchange="fileChange(this.files[0])" />
+
+<script type="text/javascript">
+  function randomObjects(objFile, numberObj){
+    fetch(objFile)
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (data) {
+        appendData(data);
+      })
+      .catch(function (err) {
+        console.log(err);
+      });
+  }
+  
+</script>
+
+</body>
+</html>
